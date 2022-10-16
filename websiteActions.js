@@ -10,26 +10,26 @@
 
 // function updateTime () {
 //   var now = new Date
-  
+
 //   var lastHours = last.getHours().toString()
 //   var nowHours = now.getHours().toString()
 //   if (lastHours !== nowHours) {
 //     updateContainer(hoursContainer, nowHours)
 //   }
-  
+
 //   var lastMinutes = last.getMinutes().toString()
 //   var nowMinutes = now.getMinutes().toString()
 //   if (lastMinutes !== nowMinutes) {
 //     updateContainer(minutesContainer, nowMinutes)
 //   }
-  
+
 // //   var lastSeconds = last.getSeconds().toString()
 // //   var nowSeconds = now.getSeconds().toString()
 // //   if (lastSeconds !== nowSeconds) {
 // //     //tick()
 // //     updateContainer(secondsContainer, nowSeconds)
 // //   }
-  
+
 //   last = now
 // }
 
@@ -39,17 +39,17 @@
 
 // function updateContainer (container, newTime) {
 //   var time = newTime.split('')
-  
+
 //   if (time.length === 1) {
 //     time.unshift('0')
 //   }
-  
-  
+
+
 //   var first = container.firstElementChild
 //   if (first.lastElementChild.textContent !== time[0]) {
 //     updateNumber(first, time[0])
 //   }
-  
+
 //   var last = container.lastElementChild
 //   if (last.lastElementChild.textContent !== time[1]) {
 //     updateNumber(last, time[1])
@@ -60,7 +60,7 @@
 //   //element.lastElementChild.textContent = number
 //   var second = element.lastElementChild.cloneNode(true)
 //   second.textContent = number
-  
+
 //   element.appendChild(second)
 //   element.classList.add('move')
 
@@ -77,12 +77,23 @@
 // function changePage(){
 //     location.src = "connectQuestions.html";
 // }
-document.getElementById("addFriends").onclick = function(){
+
+
+var dict = {};
+
+
+document.getElementById("addFriends").onclick = function () {
     console.log("addFriends clicked");
-    location.href = "connectQuestions.html";
+    window.location.replace = "connectQuestions.html";
     console.log(window.location);
 }
 //yay okay, so this works for making the pages change
-
-
+document.onload = console.log(window.location);
+document.getElementById("enterName").addEventListener(click, () => {
+    console.log("enterName clicked");
+    //adding names to dictionary as keys
+    let name = document.getElementById("name").value;
+    dict[name] = [];
+    console.log("dict[name] created");
+}, false);
 
