@@ -83,15 +83,15 @@ var dict = {};
 console.log("test");
 document.onload = console.log(window.location);
 
-document.getElementById("addFriends").onclick = function () {
+if (window.location == "http://127.0.0.1:5500/homePage.html") {document.getElementById("addFriends").onclick = function () {
     url_redirect("connectQuestions.html");
     console.log("addFriends clicked");
     console.log(window.location);
-}
+}}
 
 //yay okay, so this works for making the pages change
 
-document.getElementById("enterName").onclick = function () {
+if (window.location == "http://127.0.0.1:5500/connectQuestions.html") {document.getElementById("enterName").onclick = function () {
     console.log("enterName clicked");
     //adding names to dictionary as keys
     let name = document.getElementById("name").value;
@@ -99,7 +99,7 @@ document.getElementById("enterName").onclick = function () {
     // dict[name] = [];
     // console.log("dict[name] created");
     return false;
-}
+}}
 
 function url_redirect(url){
     var X = setTimeout(function(){
