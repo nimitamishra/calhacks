@@ -80,20 +80,45 @@
 
 
 var dict = {};
-
+console.log("test");
+document.onload = console.log(window.location);
 
 document.getElementById("addFriends").onclick = function () {
+    url_redirect("connectQuestions.html");
     console.log("addFriends clicked");
-    window.location.replace = "connectQuestions.html";
     console.log(window.location);
 }
+
 //yay okay, so this works for making the pages change
-document.onload = console.log(window.location);
-document.getElementById("enterName").addEventListener(click, () => {
+
+document.getElementById("enterName").onclick = function () {
     console.log("enterName clicked");
     //adding names to dictionary as keys
     let name = document.getElementById("name").value;
-    dict[name] = [];
-    console.log("dict[name] created");
-}, false);
+    document.writeln("The name entered was" + name);
+    // dict[name] = [];
+    // console.log("dict[name] created");
+    return false;
+}
 
+function url_redirect(url){
+    var X = setTimeout(function(){
+        window.location.replace(url);
+        return true;
+    },300);
+
+    if( window.location = url ){
+        clearTimeout(X);
+        return true;
+    } else {
+        if( window.location.href = url ){
+            clearTimeout(X);
+            return true;
+        }else{
+            clearTimeout(X);
+            window.location.replace(url);
+            return true;
+        }
+    }
+    return false;
+};
