@@ -1,6 +1,7 @@
 document.getElementById("addFriends").addEventListener("click", changePage, false);
 
 function changePage(){
+<<<<<<< HEAD
     
 }
 
@@ -79,3 +80,7 @@ function updateNumber (element, number) {
 }
 
 setInterval(updateTime, 100)
+=======
+    window.location.replace("connectQuestions.html");
+}
+>>>>>>> b3ca94d2eacb3ecedcbeeb3a803d0c15ebb39610
