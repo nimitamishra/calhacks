@@ -1,24 +1,39 @@
 #wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+    height: 100%;
+    border-collapse: collapse;
 }
+
 #viewContacts {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: flexbox;
+    margin: 10px;
+    /* position: absolute; */
 }
 
-#addFriends{
+#addFriends {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    /* display: flexbox; */
+    margin: 10px;
 }
-#importContacts{
+
+#importContacts {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    /* display: flexbox; */
+    margin: 10px;
+}
+html, body {
+    height: 100%;
 }
