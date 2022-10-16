@@ -85,39 +85,24 @@ document.onload = console.log(window.location);
 
 if (window.location == "http://127.0.0.1:5500/homePage.html") {
     document.getElementById("addFriends").onclick = function () {
-    url_redirect("connectQuestions.html");
-    console.log("addFriends clicked");
-    console.log(window.location);
+        url_redirect("connectQuestions.html");
+        console.log("addFriends clicked");
+        console.log(window.location);
+    }
 }
-//yay okay, so this works for making the pages change
-
-console.log(window.location);
-document.getElementById("enterName").addEventListener("click", () => {
-    console.log("enterName clicked");
-    //adding names to dictionary as keys
-    // let name = document.getElementById("name").value;
-    // dict[name] = [];
-    // console.log("dict[name] created");
-}, false);
 
 //yay okay, so this works for making the pages change
 
 if (window.location == "http://127.0.0.1:5500/connectQuestions.html") {
     document.getElementById("enterName").onclick = function () {
-    console.log("enterName clicked");
-    //adding names to dictionary as keys
-    let name = document.getElementById("name").value;
-    // document.writeln("The name entered was " + name);
-    dict[name] = [];
-    console.log("dict[name] created");
-    return false;
+        console.log("enterName clicked");
+        //adding names to dictionary as keys
+        let name = document.getElementById("name").value;
+        // document.writeln("The name entered was " + name);
+        dict[name] = [];
+        console.log("dict[name] created");
+        return false;
 }}
-
-if (window.location == "http://127.0.0.1:5500/frequency.html") {
-    document.getElementById("onceinawhile").onclick = function () { 
-
-    }
-}
 
 function url_redirect(url){
     var X = setTimeout(function(){
