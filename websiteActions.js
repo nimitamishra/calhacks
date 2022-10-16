@@ -88,7 +88,17 @@ if (window.location == "http://127.0.0.1:5500/homePage.html") {
     url_redirect("connectQuestions.html");
     console.log("addFriends clicked");
     console.log(window.location);
-}}
+}
+//yay okay, so this works for making the pages change
+
+console.log(window.location);
+document.getElementById("enterName").addEventListener("click", () => {
+    console.log("enterName clicked");
+    //adding names to dictionary as keys
+    // let name = document.getElementById("name").value;
+    // dict[name] = [];
+    // console.log("dict[name] created");
+}, false);
 
 //yay okay, so this works for making the pages change
 
@@ -105,7 +115,7 @@ if (window.location == "http://127.0.0.1:5500/connectQuestions.html") {
 
 if (window.location == "http://127.0.0.1:5500/frequency.html") {
     document.getElementById("onceinawhile").onclick = function () { 
-        
+
     }
 }
 
