@@ -79,10 +79,10 @@
 // }
 
 
-var dict = {};
 console.log("test");
 document.onload = console.log(window.location);
-
+let contacts = {};
+let contact = {};
 if (window.location == "http://127.0.0.1:5500/homePage.html") {
     document.getElementById("addFriends").onclick = function () {
         url_redirect("connectQuestions.html");
@@ -96,13 +96,65 @@ if (window.location == "http://127.0.0.1:5500/homePage.html") {
 if (window.location == "http://127.0.0.1:5500/connectQuestions.html") {
     document.getElementById("enterName").onclick = function () {
         console.log("enterName clicked");
+        var person_name = document.getElementById("name").value;
+        console.log(person_name);
+        contact['name'] = toString(person_name);
+        url_redirect("frequency.html");
         //adding names to dictionary as keys
-        let name = document.getElementById("name").value;
+        // let person_name = document.getElementById("name").value;
         // document.writeln("The name entered was " + name);
-        dict[name] = [];
-        console.log("dict[name] created");
-        return false;
+        return person_name;
 }}
+
+if (window.location == "http://127.0.0.1:5500/frequency.html") {
+    document.getElementById("op1").onclick = function () {
+        console.log("redirect to info.html");
+        url_redirect("info.html");
+    }
+    document.getElementById("op2").onclick = function () {
+        console.log("redirect to info.html");
+        url_redirect("info.html");
+    }
+    document.getElementById("op3").onclick = function () {
+        console.log("redirect to info.html");
+        url_redirect("info.html");
+    }
+}
+
+
+if (window.location == "http://127.0.0.1:5500/info.html") {
+    document.getElementById('submitButtonContactInfo').onclick = function () {
+        // console.log(person_name);
+        let contactFreq = document.getElementById('op1').value;
+        let phoneNum = document.getElementById('number').value;
+        let email = document.getElementById('email').value;
+        let insta = document.getElementById('social-insta').value;
+        let notes = document.getElementById('notes').value
+        contact['contactFreq'] = contactFreq;
+        contact['phoneNum'] = phoneNum;
+        contact['email'] = email;
+        contact['insta'] = insta;
+        contact['notes'] = notes;
+        console.log(contact);
+        contacts.push(
+            {
+                
+            }
+        );
+        
+        
+        // dict[person_name].push(contactFreq); 
+        // dict[person_name].push(phoneNum);
+        // dict[person_name].push(email);
+        // dict[person_name].push(insta);
+        // dict[person_name].push(notes);
+
+
+        url_redirect('homePage.html');
+        console.log(contacts);
+        //we want to set the info in the text boxes to their resepctive info for the contact
+    }
+}
 
 function url_redirect(url){
     var X = setTimeout(function(){

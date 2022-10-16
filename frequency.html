@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <style type="text/css">
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+            #q1 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                font-size: xx-large;
+                text-align: center;
+            }
+            #op1, #op2, #op3 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <p id="q1">How often would you like to contact this person?</p>
+            <input type="button" value="Once In A While" id="op1" /> <br />
+            <input type="button" value="Occasionally" id="op2" /> <br />
+            <input type="button" value="Frequently" id="op3" />
+        </div>
+        <script src="websiteActions.js"></script>
+    </body>
+</html>
