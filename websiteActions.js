@@ -95,9 +95,9 @@ if (window.location == "http://127.0.0.1:5500/connectQuestions.html") {document.
     console.log("enterName clicked");
     //adding names to dictionary as keys
     let name = document.getElementById("name").value;
-    document.writeln("The name entered was" + name);
-    // dict[name] = [];
-    // console.log("dict[name] created");
+    // document.writeln("The name entered was " + name);
+    dict[name] = [];
+    console.log("dict[name] created");
     return false;
 }}
 
