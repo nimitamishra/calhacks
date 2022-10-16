@@ -84,16 +84,16 @@ var dict = {};
 
 document.getElementById("addFriends").onclick = function () {
     console.log("addFriends clicked");
-    window.location.replace = "connectQuestions.html";
+    window.location.href = "connectQuestions.html";
     console.log(window.location);
 }
 //yay okay, so this works for making the pages change
-document.onload = console.log(window.location);
-document.getElementById("enterName").addEventListener(click, () => {
-    console.log("enterName clicked");
-    //adding names to dictionary as keys
-    let name = document.getElementById("name").value;
-    dict[name] = [];
-    console.log("dict[name] created");
-}, false);
+window.onload = console.log(window.location);
+// document.getElementById("enterName").addEventListener(click, () => {
+//     console.log("enterName clicked");
+//     //adding names to dictionary as keys
+//     let name = document.getElementById("name").value;
+//     dict[name] = [];
+//     console.log("dict[name] created");
+// }, false);
 
